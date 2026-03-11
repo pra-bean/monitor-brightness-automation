@@ -35,13 +35,13 @@ def main():
         current_mode = "day"
         if last_mode != current_mode:
             set_monitor_settings(*DAY_MODE)
-            show_notification("🌞 Day Mode Activated", "Brightness and contrast set for daytime.")
+            show_notification("Day Mode Activated", "Brightness and contrast set for daytime.")
             save_current_mode(current_mode)
     else:
         current_mode = "night"
         if last_mode != current_mode:
             set_monitor_settings(*NIGHT_MODE)
-            show_notification("🌙 Night Mode Activated", "Settings switched to night mode.")
+            show_notification("Night Mode Activated", "Settings switched to night mode.")
             save_current_mode(current_mode)
 
     with open("C:\\monitor_log.txt", "a") as log:
